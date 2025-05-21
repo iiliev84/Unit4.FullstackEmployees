@@ -1,7 +1,8 @@
-import db from "#db/client.js";
+import db from "#db/client";
+
 
 /** @returns the employee created according to the provided details */
-export async function createEmployee({ name, birthday, salary }) {
+export async function createEmployee( name, birthday, salary ) {
   const result = await db.query(
     'INSERT INTO employees (name, birthday, salary) VALUES ($1,$2,$3) RETURNING *;', [name, birthday, salary])
     return result
@@ -11,7 +12,7 @@ export async function createEmployee({ name, birthday, salary }) {
 
 /** @returns all employees */
 export async function getEmployees() {
-  const result = await client.query('SELECT * FROM employees;')
+  const result = await db.query('SELECT * FROM employees;')
   return result
 }
 

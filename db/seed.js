@@ -1,5 +1,5 @@
-import db from "#db/client.js";
-import { createEmployee } from './queries/employees.js';
+import db from "#db/client";
+import { createEmployee } from "./queries/employees.js";
 
 await db.connect();
 await seedEmployees();
@@ -7,8 +7,6 @@ await db.end();
 console.log("🌱 Database seeded.");
 
 async function seedEmployees() {
-  
-  await db.connect();
 
   await createEmployee ("John Deer", "2000-10-01", 88000)
   await createEmployee ("Jenn Calia", "1985-09-03", 45000)
@@ -23,7 +21,4 @@ async function seedEmployees() {
   await createEmployee ("Sara Good", "2000-11-11", 60000)
   await createEmployee ("Chuck Calk", "2000-11-11", 60000)
  
-  await db.end();
 }
-
-seedEmployees()
