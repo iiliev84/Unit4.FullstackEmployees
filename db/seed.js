@@ -8,17 +8,17 @@ console.log("🌱 Database seeded.");
 
 async function seedEmployees() {
 
-  await createEmployee ("John Deer", "2000-10-01", 88000)
-  await createEmployee ("Jenn Calia", "1985-09-03", 45000)
-  await createEmployee ("Alex Damato", "1999-04-18", 77000)
-  await createEmployee ("Shannon Sparks", "2001-06-24", 90000)
-  await createEmployee ("Maria Lopez", "2000-02-17", 45000)
-  await createEmployee ("Anna Smith", "1995-08-24", 50000)
-  await createEmployee ("John Belmont", "1984-08-07", 65000)
-  await createEmployee ("Bill Young", "2002-03-05", 55000)
-  await createEmployee ("Paul Gold", "1990-11-21", 75000)
-  await createEmployee ("Dan Jones", "2000-11-11", 80000)
-  await createEmployee ("Sara Good", "2000-11-11", 60000)
-  await createEmployee ("Chuck Calk", "2000-11-11", 60000)
+  await createEmployee ({name:"John Deer", birthday: "2000-10-01", salary:88000})
+  await createEmployee ({name:"Jenn Calia", birthday:"1985-09-03", salary:45000})
+  await createEmployee ({name:"Alex Damato", birthday:"1999-04-18", salary:77000})
+  await createEmployee ({name:"Shannon Sparks", birthday:"2001-06-24", salary:90000})
+  await createEmployee ({name:"Maria Lopez", birthday:"2000-02-17", salary:45000})
+  await createEmployee ({name:"Anna Smith", birthday:"1995-08-24", salary:50000})
+  await createEmployee ({name:"John Belmont", birthday:"1984-08-07", salary:65000})
+  await createEmployee ({name:"Bill Young", birthday:"2002-03-05", salary:55000})
+  await createEmployee ({name:"Paul Gold", birthday:"1990-11-21", salary:75000})
+  await createEmployee ({name:"Dan Jones", birthday:"2000-11-11", salary:80000})
+  await createEmployee ({name:"Sara Good", birthday:"2000-11-11", salary:60000})
+  await createEmployee ({name:"Chuck Calk", birthday:"2000-11-11", salary:60000})
  
 }
